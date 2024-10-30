@@ -1,19 +1,16 @@
-// src/App.js
+// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import InvoiceList from './Components/InvoiceList';
-import InvoiceDetail from './Components/InvoiceDetails';
+import ReactDOM from 'react-dom';
+import AppComponent from './Components/AppComponent';
+import { CssBaseline } from '@mui/material';
 
+// Import Material-UI CSS baseline for consistent styling across browsers
 function App() {
   return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<InvoiceList />} />
-          <Route path="/invoice/:id" element={<InvoiceDetail />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <CssBaseline /> {/* Ensures Material-UI styling across the app */}
+      <AppComponent />
+    </>
   );
 }
 
